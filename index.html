@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Polling and Voting App</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header>
+        <h1>Polling & Voting App</h1>
+        <p>Create polls, vote once, and see live results.</p>
+    </header>
+
+    <main>
+
+        <!-- Create Poll Section -->
+        <section class="card">
+            <h2>Create a Poll</h2>
+
+            <form id="pollForm">
+
+                <label for="question">Poll Question</label>
+                <input
+                    type="text"
+                    id="question"
+                    placeholder="Enter your question"
+                    required
+                >
+
+                <label>Poll Options</label>
+
+                <div id="optionsContainer">
+
+                    <input
+                        type="text"
+                        class="option"
+                        placeholder="Option 1"
+                        required
+                    >
+
+                    <input
+                        type="text"
+                        class="option"
+                        placeholder="Option 2"
+                        required
+                    >
+
+                </div>
+
+                <div class="button-group">
+                    <button type="button" id="addOption">
+                        + Add Option
+                    </button>
+
+                    <button type="submit" class="primary-btn">
+                        Create Poll
+                    </button>
+                </div>
+
+            </form>
+        </section>
+
+
+        <!-- Polls Section -->
+        <section>
+            <h2 class="section-title">Available Polls</h2>
+
+            <div id="pollsContainer">
+                <!-- Polls will be generated using JavaScript -->
+            </div>
+        </section>
+
+    </main>
+
+    <footer>
+        <p>Polling & Voting App | HTML5 • CSS3 • JavaScript • LocalStorage</p>
+    </footer>
+
+    <script src="script.js"></script>
+
+</body>
+</html>
