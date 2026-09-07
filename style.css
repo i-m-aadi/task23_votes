@@ -1,0 +1,271 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #f4f7fb;
+    color: #1f2937;
+    min-height: 100vh;
+}
+
+/* Header */
+
+header {
+    background: linear-gradient(135deg, #2563eb, #4f46e5);
+    color: white;
+    text-align: center;
+    padding: 45px 20px;
+}
+
+header h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+header p {
+    font-size: 17px;
+    opacity: 0.9;
+}
+
+/* Main */
+
+main {
+    width: 90%;
+    max-width: 1000px;
+    margin: 35px auto;
+}
+
+/* Cards */
+
+.card,
+.poll-card {
+    background: white;
+    padding: 25px;
+    border-radius: 14px;
+    margin-bottom: 25px;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+}
+
+.card h2 {
+    margin-bottom: 20px;
+}
+
+/* Form */
+
+label {
+    display: block;
+    margin: 15px 0 7px;
+    font-weight: bold;
+}
+
+input[type="text"] {
+    width: 100%;
+    padding: 12px 14px;
+    border: 1px solid #d1d5db;
+    border-radius: 8px;
+    font-size: 15px;
+    outline: none;
+    transition: 0.2s;
+}
+
+input[type="text"]:focus {
+    border-color: #2563eb;
+    box-shadow: 0 0 0 3px rgba(37, 99, 235, 0.1);
+}
+
+.option {
+    margin-bottom: 10px;
+}
+
+/* Buttons */
+
+.button-group {
+    display: flex;
+    gap: 10px;
+    margin-top: 15px;
+}
+
+button {
+    border: none;
+    padding: 11px 18px;
+    border-radius: 8px;
+    cursor: pointer;
+    font-size: 14px;
+    font-weight: bold;
+    transition: 0.2s;
+}
+
+button:hover {
+    transform: translateY(-1px);
+}
+
+#addOption {
+    background: #e5e7eb;
+    color: #374151;
+}
+
+#addOption:hover {
+    background: #d1d5db;
+}
+
+.primary-btn {
+    background: #2563eb;
+    color: white;
+}
+
+.primary-btn:hover {
+    background: #1d4ed8;
+}
+
+/* Section title */
+
+.section-title {
+    margin: 35px 0 20px;
+    font-size: 25px;
+}
+
+/* Poll */
+
+.poll-card h3 {
+    font-size: 21px;
+    margin-bottom: 18px;
+}
+
+.poll-option {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 13px;
+    margin-bottom: 10px;
+    border: 1px solid #e5e7eb;
+    border-radius: 8px;
+    cursor: pointer;
+    transition: 0.2s;
+}
+
+.poll-option:hover {
+    background: #f8fafc;
+    border-color: #93c5fd;
+}
+
+.poll-option input {
+    cursor: pointer;
+}
+
+.vote-btn {
+    margin-top: 10px;
+    background: #16a34a;
+    color: white;
+}
+
+.vote-btn:hover {
+    background: #15803d;
+}
+
+.vote-btn:disabled {
+    background: #9ca3af;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Results */
+
+.results {
+    margin-top: 20px;
+}
+
+.results h4 {
+    margin-bottom: 15px;
+}
+
+.result-item {
+    margin-bottom: 16px;
+}
+
+.result-header {
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 6px;
+    font-size: 14px;
+}
+
+.progress-container {
+    width: 100%;
+    height: 25px;
+    background: #e5e7eb;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+.progress-bar {
+    height: 100%;
+    width: 0%;
+    background: linear-gradient(90deg, #2563eb, #6366f1);
+    border-radius: 20px;
+    transition: width 0.5s ease;
+}
+
+.total-votes {
+    margin-top: 15px;
+    font-size: 14px;
+    color: #6b7280;
+}
+
+.voted-message {
+    margin-top: 15px;
+    padding: 12px;
+    background: #dcfce7;
+    color: #166534;
+    border-radius: 8px;
+    font-weight: bold;
+}
+
+/* Empty state */
+
+.empty-message {
+    text-align: center;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    color: #6b7280;
+}
+
+/* Footer */
+
+footer {
+    text-align: center;
+    padding: 25px;
+    margin-top: 40px;
+    background: #111827;
+    color: #9ca3af;
+    font-size: 14px;
+}
+
+/* Responsive */
+
+@media (max-width: 600px) {
+
+    header h1 {
+        font-size: 28px;
+    }
+
+    main {
+        width: 94%;
+    }
+
+    .card,
+    .poll-card {
+        padding: 18px;
+    }
+
+    .button-group {
+        flex-direction: column;
+    }
+
+    button {
+        width: 100%;
+    }
+}
