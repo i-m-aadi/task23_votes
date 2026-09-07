@@ -1,24 +1,12 @@
-// ==========================================
-// Polling & Voting App
-// ==========================================
-
-// Get elements from HTML
 const pollForm = document.getElementById("pollForm");
 const questionInput = document.getElementById("question");
 const optionsContainer = document.getElementById("optionsContainer");
 const addOptionButton = document.getElementById("addOption");
 const pollsContainer = document.getElementById("pollsContainer");
 
-// ==========================================
-// LocalStorage
-// ==========================================
 
-// Get existing polls from LocalStorage
 let polls = JSON.parse(localStorage.getItem("polls")) || [];
 
-// ==========================================
-// Add New Option
-// ==========================================
 
 addOptionButton.addEventListener("click", function () {
 
@@ -33,10 +21,6 @@ addOptionButton.addEventListener("click", function () {
 
     optionsContainer.appendChild(newOption);
 });
-
-// ==========================================
-// Create Poll
-// ==========================================
 
 pollForm.addEventListener("submit", function (event) {
 
@@ -64,7 +48,7 @@ pollForm.addEventListener("submit", function (event) {
 
     });
 
-    // Validate poll
+  
     if (question === "") {
         alert("Please enter a poll question.");
         return;
@@ -75,7 +59,6 @@ pollForm.addEventListener("submit", function (event) {
         return;
     }
 
-    // Create poll object
     const newPoll = {
 
         id: Date.now(),
@@ -86,16 +69,15 @@ pollForm.addEventListener("submit", function (event) {
 
     };
 
-    // Add poll to array
+  
     polls.push(newPoll);
 
-    // Save to LocalStorage
+ 
     savePolls();
 
-    // Reset form
     pollForm.reset();
 
-    // Reset options
+
     optionsContainer.innerHTML = `
         <input
             type="text"
@@ -112,16 +94,12 @@ pollForm.addEventListener("submit", function (event) {
         >
     `;
 
-    // Display polls
+
     displayPolls();
 
     alert("Poll created successfully!");
 
 });
-
-// ==========================================
-// Save Polls
-// ==========================================
 
 function savePolls() {
 
@@ -132,9 +110,6 @@ function savePolls() {
 
 }
 
-// ==========================================
-// Display Polls
-// ==========================================
 
 function displayPolls() {
 
@@ -235,9 +210,6 @@ function createPollElement(poll) {
 
 }
 
-// ==========================================
-// Create Results
-// ==========================================
 
 function createResultsHTML(poll) {
 
@@ -369,10 +341,6 @@ function vote(pollId) {
 
 }
 
-// ==========================================
-// Check Whether User Voted
-// ==========================================
-
 function hasVoted(pollId) {
 
     const votedPolls =
@@ -417,9 +385,4 @@ function escapeHTML(text) {
     return div.innerHTML;
 
 }
-
-// ==========================================
-// Initial Display
-// ==========================================
-
 displayPolls();
